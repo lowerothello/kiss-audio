@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+./waf configure --prefix=/usr
+
+./waf
+./waf install
+
+mkdir -p "$1/etc/sv/jackd"
+install -m644 run "$1/etc/sv/jackd/"
+install -m755 rtprio "$1/usr/bin/"

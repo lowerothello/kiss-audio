@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+./waf configure \
+	--with-backends=jack \
+	--no-carbon \
+	--no-phone-home \
+	--optimize \
+	--use-external-libs \
+	--prefix=/usr
+
+./waf
+./waf install

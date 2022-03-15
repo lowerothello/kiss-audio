@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+./waf configure \
+	--prefix=/usr \
+	--disable-avcodec
+
+./waf build
+./waf install
