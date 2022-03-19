@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+meson setup builddir --prefix=/usr --buildtype=release
+
+meson compile -C builddir
+meson install -C builddir

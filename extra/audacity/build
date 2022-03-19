@@ -1,0 +1,20 @@
+#!/bin/sh -e
+
+WX_CONFIG=wx-config-gtk3 ./configure \
+	--prefix=/usr \
+	--with-ffmpeg="system" \
+	--with-expat="system" \
+	--with-lame="system" \
+	--with-libsoxr="local" \
+	--with-portaudio \
+	--with-portmidi \
+	--with-libflac \
+	--with-libsamplerate \
+	--with-sbsms \
+	--with-soundtouch \
+	--with-libtwolame \
+	--with-libvorbis \
+	--with-lv2
+
+make
+make install
